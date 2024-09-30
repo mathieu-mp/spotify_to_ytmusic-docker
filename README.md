@@ -5,7 +5,7 @@ Docker image for spotify_to_ytmusic
 
 ## Usage
 ### Build the image
-TODO: doc
+Build of the `spotify_to_ytmusic` image with the provided [Dockerfile](image/Dockerfile)
 
 ### Initial setup via cli
 From the docker host:
@@ -17,7 +17,7 @@ From the docker host:
 
 1. On the docker host, enter the container: `docker run -it --rm -v /docker/spotify_to_ytmusic:/root/.cache/spotify_to_ytmusic/ spotify_to_ytmusic /bin/sh`
 1. In the container, run `spotify_to_ytmusic create <spotify_https_url>`
-1. At first launch, spotify_to_ytmusic will require you to complete the OAuth via your browser.
+1. At first launch, `spotify_to_ytmusic` will require you to complete the OAuth via your browser.
 
 ### Update usage via cli
 
