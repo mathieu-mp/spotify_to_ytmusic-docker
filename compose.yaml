@@ -1,0 +1,13 @@
+---
+version: "3"
+services:
+  spotify_to_ytmusic:
+    image: "spotify_to_ytmusic:latest"
+    container_name: spotify-to-ytmusic
+    volumes:
+      - /docker/spotify_to_ytmusic:/root/.cache/spotify_to_ytmusic/
+    entrypoint: spotify_to_ytmusic
+    command: 'update --append APPEND <spotify_https_url> <ytmusic_playlist_name>'
+    restart: no
+    environment:
+      PYTHONUNBUFFERED: 1 # Avoid delaying the logs from Python
